@@ -10,7 +10,8 @@ folder_name = os.path.basename(directory_path)
 
 imagelist = [f for f in listdir(directory_path) if isfile(join(directory_path, f))]
 imagelist.remove('pdf_creator.py')
-imagelist.remove(f'{folder_name}.pdf')
+if f'{folder_name}' in imagelist:
+    imagelist.remove(f'{folder_name}.pdf')
 imagelist.sort(key=lambda x: os.path.getmtime(x))
 
 
