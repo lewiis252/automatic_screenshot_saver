@@ -1,7 +1,6 @@
 import pyautogui
 import time
 import os
-import matplotlib.pyplot as plt
 import PIL
 from PIL import Image
 import numpy as np
